@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<grupo>
+    <noticia>
+        <pknot>3</pknot>
+        <imagem>http://s2.glbimg.com/Gi0dB3Mxz6LQjYVkRL4weRKkVKQ=/0x0:960x540/1000x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2017/05/19/pontetc10.jpg</imagem>
+        <titulo>Com o slogan de mais barato do Brasil, Ponte lança novo plano de sócio-torcedor</titulo>
+        <subtitulo>Pontepretanos podem aderir por R$ 39,90 o Plano Arquibancada</subtitulo>
+    </noticia>
+    <noticia>
+        <pknot>2</pknot>
+        <imagem>http://s2.glbimg.com/tOey6-vyauEO8becoqTmpFjqrcQ=/0x0:4736x3157/1000x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2017/04/21/mco_1642.jpg</imagem>
+        <titulo>No Náutico, Waldemar Lemos revela conversa com Erick para tranquilizá-lo</titulo>
+        <subtitulo>Substituído nos dois jogos que fez com o comandante</subtitulo>
+        </noticia>
+    <noticia>
+        <pknot>1</pknot>
+        <imagem>http://s2.glbimg.com/dShdy0FBOvpMMeMtxrZW4WfSUIg=/606x57:1106x438/1000x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2016/12/01/flamengo.jpg</imagem>
+        <titulo>Conselho votará mudanças nos escudos do Flamengo</titulo>
+        <subtitulo>Vice de comunicação apresenta proposta que prevê ajustes nas letras que compõem os símbolos do clube</subtitulo>
+    </noticia>
+</grupo>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x2js/1.2.0/xml2json.js"></script>
+    <script>
+        var exemplo = angular.module("exemplo", []);
+        exemplo.controller("controllerExemploJson", function($scope, $http) {
+            $http({
+                method: 'GET',
+                url: 'lista.json'
+            }).then(function successCallback(response) {
+                $scope.itemJson = response.data.grupo.noticia;
+                console.log($scope.itemJson);
+            }, function errorCallback(response) {
+                console.log(response.data.grupo.noticia);
+            });
+        });
+        exemplo.controller("controllerExemploXML", function($scope, $http) {
+            $http({
+                method: 'GET',
+                url: 'lista.xml'
+            }).then(function successCallback(response) {
+                var x2js = new X2JS();
+                var jsonData = x2js.xml_str2json(response.data);
+                $scope.itemXML = jsonData.grupo.noticia;
+                console.log($scope.itemXML);
+            }, function errorCallback(response) {
+                console.log(response.jsonData);
+            });
+        });
+        angular.bootstrap(document.getElementById('AppJson'),['exemplo']);
+        angular.bootstrap(document.getElementById('AppXML'),['exemplo']);
+
+    </script>
+</head>
+<body ng-app="exemplo">
+<div class="py-5  section" id="AppJson" >
+    <div class="container" ng-controller="controllerExemploJson">
+        <div ng-repeat="itemj in itemJson">
+            <div class="row">
+                <div class="col-md-3">
+                    <img ng-src={{itemj.imagem}} class="img-fluid img-thumbnail">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="text-success">{{itemj.titulo}}</h2>
+                    <h4 class="text-muted">{{itemj.subtitulo}}</h4>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+
+<div class="py-5  section" id="AppXML">
+    <div class="container" ng-controller="controllerExemploXML">
+        <div ng-repeat="itemx in itemXML">
+            <div class="row">
+                <div class="col-md-3">
+                    <img ng-src={{itemx.imagem}} class="img-fluid img-thumbnail">
+                </div>
+                <div class="col-md-9">
+                    <h2 class="text-success">{{itemx.titulo}}</h2>
+                    <h4 class="text-muted">{{itemx.subtitulo}}</h4>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+</body>
+</html>
