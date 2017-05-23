@@ -3,7 +3,7 @@ Implementação utilizando AngularJS com Json e XML para o Seminário de Banco d
 
 Agradecimento há todos os participantes.
 
-# Non-SQL Seminar
+# No-SQL Seminar
 Implementing using AngularJS with Json and XML for the Advanced Database Seminar Topic: No-SQL
 
 Thank you all the participants.
